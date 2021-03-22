@@ -72,8 +72,8 @@ public class GameArea extends JPanel implements ActionListener
 		Graphics2D g2 = (Graphics2D) g;
 		g.setColor(Color.BLACK);
 		g.fillRect(0, 0, getWidth(), getHeight());
-		g.setColor(Color.YELLOW);
-		g2.fill(Player.getPlayer().getBoundingBox());
+		// g.setColor(Color.YELLOW);
+		// g2.fill(Player.getPlayer().getBoundingBox());
 		if(Player.getPlayer().getHealth() < 1)
 			status = "Zombie Food";
 
@@ -149,7 +149,6 @@ public class GameArea extends JPanel implements ActionListener
 
 	public void actionPerformed(ActionEvent a)
 	{                
-		System.out.println("actionPerformed");
 		for(GameObject storedObject : storeList)
 		{
 			objectList.addLast(storedObject);
